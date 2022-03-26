@@ -1,0 +1,104 @@
+﻿<html>
+<head>
+<link href="files/cssplayer.css" rel="stylesheet" /> 
+<script src="files/liveplayer.js"></script> 
+<link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet" />
+<script src="files/video.js"></script>
+<script src="files/videojs-contrib-hls.js"></script>
+<meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport">
+<title>AZROTVPLAYER</title>
+<style id="page-skin-1" type="text/css"><!--
+body{margin:0;padding:0;background:#222;overflow:hidden;}
+.post.hentry.uncustomized-post-template { position: absolute; height: 100%; width: 100%; margin: 0 auto; padding: 0px; box-sizing: border-box; }
+.post iframe {width:100%;height:100%;border:0;}
+.multii { width: 100%; max-width: fit-content; margin: 0 auto; padding: 10px 0; }
+.multii button { margin: 0 10px; border: 0; font: bold 15px tahoma; padding: 5px 15px; border-radius: 21px; border: 2px solid #ee2d2d; background: #ee2d2d; color: #fceded; }
+.multii button:hover { background: transparent; border: 2px solid #ee2d2d; transition: 0.5s; color: #ee2d2d; }
+#myDIV { position: absolute; width: 100%; height: 100%; background: rgba(177, 32, 37, 0.32); box-shadow: inset 0 0 100px 60px #000; }
+#share_channel { position: absolute; width: 100%; height: 100%; }
+span#share_text { display: block; color: #fff; margin-top: 40px; text-align: center; font: bold 22px arial; }
+textarea#z { margin: 39px 20px 26px 0; padding: 0 45px; height: 40px; text-align: left; border-radius: 54px; width: 90%; border: 0; display: block; }
+.servers-qualities {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background-image: linear-gradient(to bottom, #240b36 0%, #c31432 51%, #240b36 100%);
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px;
+left: 0;
+}
+.servers-qualities a {
+text-decoration: none;
+border: solid 3px;
+text-align: center;
+transition: 0.5s;
+background-size: 200% auto;
+background-image: linear-gradient(to right, #240b36 0%, #c31432 51%, #240b36 100%);
+color: #fff;
+display: block;
+position: relative;
+font-size: 22px;
+border-radius: 20px;
+padding: 5px;
+}
+.servers-qualities a:hover {
+background-position : right center ;
+}
+#video{}
+#video #video-player{}
+#video #video-player iframe{position:absolute;top:0;left:0;width:99.88%;height:100%}
+#video #server-list{position:relative;}
+#video #server-list a:hover{background:#e74c3c}
+.server-item{}
+#video #server-list a{border-radius: 8px; color: #fff; text-decoration: none; font-family: tahoma; padding: 5px 10px; display: inline-block; margin: 10px 5px; font-size: 12px; background: #b12025;}
+a:active{background-color:#e74c3c}
+
+
+div#hls-video_fluid_control_video_source { display: none !important; }
+  div#hls-video_fluid_controls_progress_container{    bottom: 58px;height: 2px; background-color: rgba(255, 0, 0, 0.68);}
+div#hls-video_fluid_control_theatre { position: fixed; top: unset; bottom: 5px; right: 45px; }
+  #hls-video_fluid_controls_container{left: 0px; right: 0px; background: linear-gradient(to bottom,rgba(0,0,0,0.12) 0%,rgba(255, 255, 255, 0.1) 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000',endColorstr='#ad000000',GradientType=0); height: 58px;}
+.fluid_video_wrapper .vast_video_loading:after { color: #ffffff73; content: " "; position: absolute; top: 50%; width: 100%; height: 100%; font-family: tahoma; bottom: 0; text-align: center; margin: 0 auto; font-size: 11px; }
+#hls-video_fluid_initial_play_button:before {font-family: tahoma; content: ''; font-weight: bold; font-size: 12px !important; top: 25px; height: unset; color: #efff00; bottom: unset; background: unset; text-shadow: 1px 1px 1px #2b2727; opacity: 0.8;}
+#hls-video_fluid_control_duration:before{content:'LIVE'!important;right:-10px;font-size:12px;}
+  @media screen and (max-width: 1225px){
+    #hls-video_fluid_initial_play_button:before {font-size:15px !important;}
+ }
+  @media screen and (max-width: 500px){
+  #hls-video_fluid_control_theatre{display:none !important;}
+    #hls-video_fluid_initial_play_button:before {font-size:12px !important;}
+}
+  .shr, .rfs{cursor:pointer;position: absolute;top:5px;padding: 3px; border: 0; border-radius: 8px; z-index: 99999999999999999999; font-size: 11px; font-family: tahoma; color: #fff; text-decoration: none;background:#b12025;}
+  div#hls-video_fluid_controls_progress_container{background:#b12025;}
+  #hls-video_fluid_control_duration:before{font-family:tahoma;}
+  .fluid_initial_play{width:48px;border-radius:100%;}
+  .fluid_initial_play .fluid_initial_play_button{margin-left:17px;}
+</style>
+</head>
+<body>
+<div class="main section" id="main">
+	                         
+	<div class="widget Blog" data-version="1" id="Blog1">
+		                         
+		<div class="blog-posts hfeed">
+			                         
+			<div class="post-outer">
+				                         
+				<div class="post hentry uncustomized-post-template" itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+					            <meta content="1556692568663119022" itemprop="blogId" /><meta content="4882928990240559615" itemprop="postId" /><video id="hls-video" style="width: 100%; height: 100%;"><source src="http://live-hls-web-aja.getaj.net/AJA/01.m3u8" title="480p" type="application/x-mpegURL" /></video>
+<script>var myFP = fluidPlayer('hls-video',{layoutControls:{autoPlay:true,allowTheatre: true}});</script>              
+				</div>
+				                         
+			</div>
+			                         
+		</div>
+		                   
+	</div>
+</div>
+
+</body>
+</html>
